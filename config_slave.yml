@@ -1,0 +1,6 @@
+hostname: k3worker3
+k3os:
+  password: warbler18
+  server_url: https://192.168.1.132:6443
+  token: K10044fa79cb07cb80eb243dd0542d8a08e1488645a9db9518446d9517275fbc9fe::server:c74f81022d7576247a526f9d6c482285
+  
