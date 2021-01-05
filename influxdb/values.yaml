@@ -51,10 +51,10 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: nfs
   annotations:
   accessMode: ReadWriteOnce
-  size: 8Gi
+  size: 2Gi
 
 ## Deploy InfluxDB Enterprise - License required
 ## ref: https://www.influxdata.com/products/influxdb-enterprise/
