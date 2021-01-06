@@ -16,7 +16,7 @@ service:
     port: 1880
 strategy:
   type: Recreate
-hostNetwork: true
+
 timezone: "Europe/Zurich"
 
 ingress:
