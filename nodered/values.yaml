@@ -21,10 +21,36 @@ timezone: "Europe/Zurich"
 
 ingress:
   enabled: true
-  tls: false
-  # secretName: my-tls-cert # only needed if tls above is true
-  hostname: nodered.192.168.1.220.nip.io
-  annotations:
-    # kubernetes.io/ingress.class: "nginx"
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+  labels: {}
+  hosts:
+    - host: nodered.192.168.1.220.nip.io
+      paths:
+        - path: /
+          # Ignored if not kubeVersion >= 1.14-0
+          pathType: Prefix
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+  additionalIngresses: []
+  # - enabled: false
+  #   nameSuffix: "api"
+  #   annotations: {}
+  #   # kubernetes.io/ingress.class: nginx
+  #   # kubernetes.io/tls-acme: "true"
+  #   labels: {}
+  #   hosts:
+  #     - host: chart-example.local
+  #       paths:
+  #         - path: /api
+  #           # Ignored if not kubeVersion >= 1.14-0
+  #           pathType: Prefix
+  #   tls: []
+  #   #  - secretName: chart-example-tls
+  #   #    hosts:
+  #   #      - chart-example.local
+
 
