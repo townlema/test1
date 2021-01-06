@@ -53,4 +53,7 @@ ingress:
   #   #    hosts:
   #   #      - chart-example.local
 
+# When using hostNetwork make sure you set dnsPolicy to ClusterFirstWithHostNet
+hostNetwork: true
 
+dnsPolicy: ClusterFirstWithHostNet
