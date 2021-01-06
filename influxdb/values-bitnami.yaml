@@ -64,7 +64,7 @@ authEnabled: false
 ## InfluxDB admin credentials
 ##
 adminUser:
-  name: admin
+  name:
   pwd:
   usePasswordFile: false
 ## InfluxDB credentials for user with 'admin' privileges on the db specified at 'database' parameter
