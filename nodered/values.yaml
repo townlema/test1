@@ -1,0 +1,20 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: nodered/node-red
+  tag: latest
+persistence:
+  data:
+    emptyDir: false
+    enabled: true
+    mountPath: /data
+    storageClass: nfs
+    accessMode: ReadWriteOnce
+    size: 5Gi
+service:
+  port:
+    port: 1880
+strategy:
+  type: Recreate
+hostNetwork: true
+timezone: "Europe/Zurich"
