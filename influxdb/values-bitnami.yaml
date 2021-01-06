@@ -59,7 +59,8 @@ database: monitoring
 ## Enable/disable authentication
 ## ref: https://github.com/bitnami/bitnami-docker-influxdb#allowing-empty-passwords
 ##
-authEnabled: false
+#authEnabled: false
+auth-enabled: false
 
 ## InfluxDB admin credentials
 ##
