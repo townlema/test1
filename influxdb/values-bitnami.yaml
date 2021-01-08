@@ -59,33 +59,32 @@ database: monitoring
 ## Enable/disable authentication
 ## ref: https://github.com/bitnami/bitnami-docker-influxdb#allowing-empty-passwords
 ##
-#authEnabled: false
-auth-enabled: false
+authEnabled: false
 
 ## InfluxDB admin credentials
 ##
-#adminUser:
-#  name:
-#  pwd:
-#  usePasswordFile: false
+adminUser:
+  name: 
+  pwd: 
+  usePasswordFile: false
 ## InfluxDB credentials for user with 'admin' privileges on the db specified at 'database' parameter
 ##
-#user:
-#  name:
-#  pwd:
-#  usePasswordFile: false
+user:
+  name:
+  pwd:
+  usePasswordFile: false
 ## InfluxDB credentials for user with 'read' privileges on the db specified at 'database' parameter
 ##
-#readUser:
-#  name:
-#  pwd:
-#  usePasswordFile: false
+readUser:
+  name:
+  pwd:
+  usePasswordFile: false
 ## InfluxDB credentials for user with 'write' privileges on the db specified at 'database' parameter
 ##
-#writeUser:
-#  name:
-#  pwd:
-#  usePasswordFile: false
+writeUser:
+  name:
+  pwd:
+  usePasswordFile: false
 
 ## Secret with InfluxDB credentials
 ## NOTE: This will override the users/passwords defined at adminUser, user, readUser and writeUser
@@ -99,12 +98,11 @@ influxdb:
   ## Specify content for influxdb.conf
   ## Alternatively, you can put your influxdb.conf under the files/conf/ directory
   ##
-  # configuration: |-
+  # configuration:
   #   reporting-disabled = false
   #   bind-address = "127.0.0.1:8088"
   #   [meta]
-  #   dir = "/bitnami/influxdb/meta"
-  #   ...
+  #   dir = "/bitnami/influxdb/meta"  
 
   ## ConfigMap with InfluxDB configuration
   ## NOTE: This will override influxdb.configuration
@@ -140,7 +138,7 @@ influxdb:
 
   ## Number of InfluxDB replicas to deploy
   ##
-  replicaCount: 2
+  replicaCount: 1
 
   ## Update strategy, can be set to RollingUpdate or OnDelete by default.
   ## ref: https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#updating-statefulsets
@@ -305,7 +303,7 @@ ingress:
   ## Most likely this will be just one host, but in the event more hosts are needed, this is an array
   hosts:
     - name: influxdb.192.168.1.220.nip.io
-      path: /
+  ##    path: /
 
   ## The tls configuration for the ingress
   ## see: https://kubernetes.io/docs/concepts/services-networking/ingress/#tls
